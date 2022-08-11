@@ -1,24 +1,24 @@
 # redux-persist-transform-encrypt
 
-[![npm](https://img.shields.io/npm/v/redux-persist-transform-encrypt.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/redux-persist-transform-encrypt)
+[![npm](https://img.shields.io/npm/v/@mnabaci/redux-persist-transform-encrypt.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/@mnabaci/redux-persist-transform-encrypt)
 [![Travis](https://img.shields.io/travis/maxdeviant/redux-persist-transform-encrypt.svg?maxAge=3600&style=flat-square)](https://travis-ci.org/maxdeviant/redux-persist-transform-encrypt)
 
 Encrypt your Redux store.
 
 ## Installation
 
-`redux-persist-transform-encrypt` must be used in conjunction with `redux-persist`, so make sure you have that installed as well.
+`@mnabaci/redux-persist-transform-encrypt` must be used in conjunction with `redux-persist`, so make sure you have that installed as well.
 
 #### Yarn
 
 ```sh
-yarn add redux-persist-transform-encrypt
+yarn add @mnabaci/redux-persist-transform-encrypt
 ```
 
 #### npm
 
 ```sh
-npm install redux-persist-transform-encrypt
+npm install @mnabaci/redux-persist-transform-encrypt
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ npm install redux-persist-transform-encrypt
 
 ```js
 import { persistReducer } from 'redux-persist';
-import { encryptTransform } from 'redux-persist-transform-encrypt';
+import { encryptTransform } from '@mnabaci/redux-persist-transform-encrypt';
 
 const reducer = persistReducer(
   {

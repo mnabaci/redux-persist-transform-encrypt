@@ -17,13 +17,11 @@ const inMemoryStorage = () => {
       }),
     setItem: (key, item) =>
       new Promise(resolve => {
-        memory.set(key, item);
-        resolve();
+        resolve(memory.set(key, item));
       }),
     removeItem: key =>
       new Promise(resolve => {
-        memory.delete(key);
-        resolve();
+        resolve(memory.delete(key));
       }),
   };
 

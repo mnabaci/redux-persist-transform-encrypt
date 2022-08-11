@@ -1,6 +1,6 @@
 {
-  "name": "redux-persist-transform-encrypt",
-  "version": "3.0.1",
+  "name": "@mnabaci/redux-persist-transform-encrypt",
+  "version": "3.1.0",
   "description": "Encrypt your Redux store.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxdeviant/redux-persist-transform-encrypt.git"
+    "url": "git+https://github.com/mnabaci/redux-persist-transform-encrypt.git"
   },
   "keywords": [
     "redux",
@@ -22,9 +22,9 @@
   "author": "Marshall Bowers <elliott.codes@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maxdeviant/redux-persist-transform-encrypt/issues"
+    "url": "https://github.com/mnabaci/redux-persist-transform-encrypt/issues"
   },
-  "homepage": "https://github.com/maxdeviant/redux-persist-transform-encrypt#readme",
+  "homepage": "https://github.com/mnabaci/redux-persist-transform-encrypt#readme",
   "files": [
     "lib/",
     "index.d.ts"
@@ -39,7 +39,9 @@
   },
   "devDependencies": {
     "@types/crypto-js": "^4.0.1",
+    "@types/jest": "^28.1.6",
     "@types/json-stringify-safe": "^5.0.0",
+    "@types/redux": "^3.6.0",
     "@types/redux-persist": "^4.3.1",
     "jest": "^26.5.3",
     "prettier": "^2.1.2",
