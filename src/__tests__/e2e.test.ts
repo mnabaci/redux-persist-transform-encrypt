@@ -16,12 +16,14 @@ const inMemoryStorage = () => {
         resolve(memory.get(key));
       }),
     setItem: (key, item) =>
-      new Promise(resolve => {
-        resolve(memory.set(key, item));
+      new Promise<void>(resolve => {
+        memory.set(key, item);
+        resolve();
       }),
     removeItem: key =>
-      new Promise(resolve => {
-        resolve(memory.delete(key));
+      new Promise<void>(resolve => {
+        memory.delete(key);
+        resolve();
       }),
   };
 

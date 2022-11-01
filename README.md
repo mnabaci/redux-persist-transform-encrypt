@@ -1,7 +1,7 @@
 # redux-persist-transform-encrypt
 
-[![npm](https://img.shields.io/npm/v/@mnabaci/redux-persist-transform-encrypt.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/@mnabaci/redux-persist-transform-encrypt)
-[![Travis](https://img.shields.io/travis/maxdeviant/redux-persist-transform-encrypt.svg?maxAge=3600&style=flat-square)](https://travis-ci.org/maxdeviant/redux-persist-transform-encrypt)
+[![npm](https://img.shields.io/npm/v/redux-persist-transform-encrypt.svg?maxAge=3600)](https://www.npmjs.com/package/redux-persist-transform-encrypt)
+[![CI](https://github.com/mnabaci/redux-persist-transform-encrypt/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/mnabaci/redux-persist-transform-encrypt/actions/workflows/ci.yml)
 
 Encrypt your Redux store.
 
@@ -46,7 +46,7 @@ const reducer = persistReducer(
 
 ### Asynchronous
 
-Asynchronous support was removed in v3.0.0, as it was never fully supported and is not able to be implemented correctly given the current constraints that `redux-persist` imposes on transforms. See [#48](https://github.com/maxdeviant/redux-persist-transform-encrypt/issues/48) for more details.
+Asynchronous support was removed in v3.0.0, as it was never fully supported and is not able to be implemented correctly given the current constraints that `redux-persist` imposes on transforms. See [#48](https://github.com/mnabaci/redux-persist-transform-encrypt/issues/48) for more details.
 
 ### Custom Error Handling
 

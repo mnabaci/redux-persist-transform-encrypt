@@ -2,6 +2,7 @@ import * as Aes from 'crypto-js/aes';
 import * as CryptoJsCore from 'crypto-js/core';
 import stringify from 'json-stringify-safe';
 import { createTransform } from 'redux-persist';
+import type { TransformConfig } from 'redux-persist/lib/createTransform';
 
 export interface EncryptTransformConfig {
   secretKey: string;
@@ -11,7 +12,10 @@ export interface EncryptTransformConfig {
 const makeError = (message: string) =>
   new Error(`redux-persist-transform-encrypt: ${message}`);
 
-export const encryptTransform = (config: EncryptTransformConfig) => {
+export const encryptTransform = <HSS, S = any, RS = any>(
+  config: EncryptTransformConfig,
+  transformConfig?: TransformConfig
+) => {
   if (typeof config === 'undefined') {
     throw makeError('No configuration provided.');
   }
@@ -24,7 +28,7 @@ export const encryptTransform = (config: EncryptTransformConfig) => {
   const onError = 
     typeof config.onError === 'function' ? config.onError : (err: Error, _: any) => console.warn(err);
 
-  return createTransform(
+  return createTransform<HSS, string, S, RS>(
     (inboundState, _key) =>
       Aes.encrypt(stringify(inboundState), secretKey).toString(),
     (outboundState, _key) => {
@@ -53,6 +57,7 @@ export const encryptTransform = (config: EncryptTransformConfig) => {
           outboundState
         );
       }
-    }
+    },
+    transformConfig
   );
 };
